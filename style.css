@@ -1,0 +1,259 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: black;
+}
+#logo{
+    width: 100px;
+    height: 80px;
+    /* border:solid black; */
+    margin:0;
+    display: flex;
+    object-fit:cover;
+    /* object-fit: none; */
+    /* object-position:top left ; */
+}
+#header{
+    
+    display: flex; 
+    align-items: center;   
+    justify-content: space-between;
+    padding:20px ;
+    background: WHITE;
+    border-bottom:5px solid ;
+    box-shadow: 0 5px 15px rgba(0, 0,0,0.06);
+    position: sticky;
+    top:0;
+    z-index: 5;
+}
+#navbar{
+    display: flex;
+    align-items:center;
+    justify-content:center ;
+}
+#navbar li{
+    list-style: none;
+    padding: 0 20px;
+    position:relative;
+}
+#navbar li a{
+    text-decoration: none;
+    font-size:16px;
+    font-weight: 600;
+    color:#1a1a1a;
+    transition:0.3s ease;
+}
+#navbar li a:hover{
+    color:aqua;
+}
+#navbar li a:hover,
+#navbar li a.active{
+    color:#088178;
+}
+#navbar li a.active::after{
+    content:"";
+    width: 30%;
+    height:2px;
+    background: #088178;
+    position: absolute;
+    bottom:-4px;
+    left:20px;
+}
+.main{
+    /* background-image: url("background.jpg"); */
+    height: 88.5vh;
+    position:relative;
+    background-size: max(1200px,100vw);
+    background-repeat: no-repeat;
+    background-position: center center;
+    
+}
+.main .box{
+    height: 90vh;
+    width: 100%;
+    opacity: 0.69;
+    position: absolute;
+    top:0;
+    /* background-color: black; */
+}
+nav{
+    max-width: 77vw;
+    /* background-color: red; */
+    display:flex ;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 135px;
+    height: 62px;
+    padding-bottom:50px ;
+}
+nav img{
+    color: red;
+    width:114px;
+    position: relative;
+    z-index: 10;
+}
+nav button{
+    position: relative;
+    z-index: 10;
+    margin: 20px 0;
+    /* border:none; */
+}
+.box{
+    padding: 200px 0;
+}
+.hero{
+    font-family: sans-serif;
+    height:calc(100%-62px) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color:wheat;
+    position: relative;
+    gap:23px;
+    padding:0 25px;
+    margin-bottom:100px;
+}
+.hero >:first-child{
+    font-weight: 700;
+    font-size: 48px;
+    /* gap:123px; */
+    text-align: center;
+
+}
+.hero >:nth-child(2){
+    font-weight: 400;
+    font-size:24px;
+    text-align: center;
+}
+.hero >:nth-child(3){
+    font-weight: 400;
+    font-size:20px;
+    text-align: center;
+}
+
+.separate{
+    height: 7px;
+    background-color: rgb(46, 45, 45);
+
+}
+.btn,.inp{
+    padding: 3px 8px;
+    font-weight: 400;
+    border:none;
+    border-radius: 4px;
+    background-color: rgba(248, 243, 243, 0.021);
+    border:1px solid rgb(251, 247, 247);
+    color:white;
+    cursor: pointer;
+
+}
+.btn{
+    transition: 0.3s ease-in-out;
+    border-radius: 20px;
+}
+.btn:hover{
+    background-color:wheat;
+    color: black;
+}
+.inp{
+    font-family: sans-serif;
+    /* font-weight: 500; */
+    font-size:12px;
+    border: none;
+    padding: 7px 15px;
+    background-color: rgb(0,0,0,0);
+    border-bottom: 1px solid rgba(204, 194, 194, 0.651);
+    padding-right: 100px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    padding-top: 11px;
+    font-weight:600;
+    
+}
+.btn-red-sm{
+    background-color: red;
+    color:white;
+   
+    
+}
+.fire{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+    
+}
+.btn-red{
+    background-color: transparent;
+    color:white;
+    /* padding: 4px 24px; */
+    font-weight: 500;
+    font-size:18px;
+    /* padding: 5px 15px; */
+    font-family: sans-serif;
+}
+.go{
+    font-size: 12px;
+    border-right:2px solid ;
+    width:75%;
+    white-space:nowrap;
+    overflow:hidden;
+    animation:type 3s infinite alternate;
+}
+@keyframes type {
+    from{
+        width: 0;
+    }
+    
+}
+/* Basic Button Styles */
+button {
+    background-color: #3498db; /* Background color */
+    color: #fff; /* Text color */
+    padding: 10px 15px; /* Padding around text */
+    font-size: 16px; /* Font size */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Add rounded corners */
+    cursor: pointer; /* Cursor style on hover */
+}
+
+/* Hover effect */
+button:hover {
+    background-color: #2980b9; /* Darker background color on hover */
+}
+
+/* Additional Styles for Primary Button */
+.primary-button {
+    background-color: #e74c3c; /* Red color for primary button */
+}
+
+/* Hover effect for Primary Button */
+.primary-button:hover {
+    background-color: #c0392b; /* Darker red color on hover */
+}
+
+/* Additional Styles for Secondary Button */
+.secondary-button {
+    background-color: #2ecc71; /* Green color for secondary button */
+}
+
+/* Hover effect for Secondary Button */
+.secondary-button:hover {
+    background-color: #27ae60; /* Darker green color on hover */
+}
+
+/* Disabled Button Styles */
+button:disabled {
+    background-color: #95a5a6; /* Gray background for disabled button */
+    color: #ecf0f1; /* Light text color for disabled button */
+    cursor: not-allowed; /* Disable cursor for disabled button */
+}
+.button a{
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+    
+}
